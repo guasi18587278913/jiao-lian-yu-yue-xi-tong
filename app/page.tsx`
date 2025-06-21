@@ -1,0 +1,32 @@
+  <section className="py-20 px-4 flex-grow">
+    <div className="container mx-auto text-center">
+      <InternalBadge />
+    </div>
+  </section>
+
+  {/* Color Theme Selector */}
+  {/*
+  <section className="py-8 px-4 bg-white/50">
+  </section>
+  */}
+
+  {/* Features Section */}
+  {/*
+  <section className="py-16 px-4">
+  </section>
+  */}
+
+  {/* Stats Section */}
+  {/*
+  <section className="py-16 px-4 bg-white">
+  </section>
+  */}
+
+  {/* Features Highlight */}
+  {/*
+  <section className="py-16 px-4 bg-gradient-to-r from-emerald-50 to-teal-50">
+  </section>
+  */}
+
+</div>
+) 
