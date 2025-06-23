@@ -3,8 +3,8 @@ import { Building2 } from "lucide-react"
 
 export function InternalBadge() {
   return (
-    <Badge className="bg-yellow-400 text-black hover:bg-yellow-400 mb-4 font-semibold">
-      <Building2 className="w-3 h-3 mr-1" />
+    <Badge className="mb-2 transform-gpu border border-amber-300/80 bg-amber-200/80 p-2 text-sm font-semibold text-amber-800 shadow-sm backdrop-blur-sm transition-all hover:bg-amber-200">
+      <Building2 className="mr-1.5 h-4 w-4" />
       内部专用
     </Badge>
   )
