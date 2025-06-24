@@ -6,26 +6,39 @@ export const authConfig = {
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
-        username: { label: 'Username', type: 'text' },
+        email: { label: 'Email', type: 'email' },
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
         // This is where you'd typically look up the user from a database.
         // For this example, we'll use hardcoded users.
         const users = [
-          { id: '1', username: 'student', password: 'password', role: 'student' },
-          { id: '2', username: 'coach', password: 'password', role: 'coach' },
-          { id: '3', username: 'admin', password: 'password', role: 'admin' },
+          {
+            id: '1',
+            email: 'student@test.com',
+            password: 'student',
+            role: 'student',
+          },
+          {
+            id: '2',
+            email: 'coach@test.com',
+            password: 'coach',
+            role: 'coach',
+          },
+          {
+            id: '3',
+            email: 'admin@test.com',
+            password: 'admin',
+            role: 'admin',
+          },
         ];
 
-        const user = users.find(
-          (user) => user.username === credentials.username
-        );
+        const user = users.find((user) => user.email === credentials.email);
 
         if (user && user.password === credentials.password) {
           // Return a user object, which will be stored in the session.
           // Don't include the password in the returned object.
-          return { id: user.id, name: user.username, role: user.role };
+          return { id: user.id, name: user.email, role: user.role };
         }
         // Return null if user data could not be retrieved
         return null;
